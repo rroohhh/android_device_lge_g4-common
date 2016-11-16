@@ -89,6 +89,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.metadata_dynfps.disable=true \
     persist.sys.wfd.virtual=0
 
+# FIFO: enable scheduling for UI and Render threads by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.use_fifo_ui=1
+
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/bootdevice/by-name/persistent
