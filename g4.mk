@@ -26,6 +26,10 @@ $(call inherit-product-if-exists, vendor/lge/g4-common/g4-common-vendor.mk)
 PRODUCT_PACKAGES += \
     io.github.berkantkz.kztorch
 
+# rootless torch tile workaround
+PRODUCT_PACKAGES += \
+    Flashlight
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
