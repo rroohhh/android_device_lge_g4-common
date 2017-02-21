@@ -21,6 +21,14 @@ PRODUCT_AAPT_PREF_CONFIG := 560dpi
 # Inherit proprietary blobs
 $(call inherit-product-if-exists, vendor/lge/g4-common/g4-common-vendor.mk)
 
+# Torch tile workaround
+PRODUCT_PACKAGES += \
+    io.github.berkantkz.kztorch
+
+# rootless torch tile workaround
+PRODUCT_PACKAGES += \
+    Flashlight
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
@@ -35,4 +43,3 @@ include $(LOCAL_PATH)/product/*.mk
 $(call inherit-product, frameworks/native/build/phone-xxxhdpi-3072-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-3072-hwui-memory.mk)
-
