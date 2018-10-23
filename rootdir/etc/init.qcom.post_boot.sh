@@ -93,8 +93,6 @@ case "$target" in
         # Setting b.L scheduler parameters
         echo 1 > /proc/sys/kernel/sched_migration_fixup
         echo 30 > /proc/sys/kernel/sched_small_task
-        echo 20 > /proc/sys/kernel/sched_mostly_idle_load
-        echo 3 > /proc/sys/kernel/sched_mostly_idle_nr_run
         echo 99 > /proc/sys/kernel/sched_upmigrate
         echo 85 > /proc/sys/kernel/sched_downmigrate
         echo 400000 > /proc/sys/kernel/sched_freq_inc_notify
@@ -116,8 +114,7 @@ case "$target" in
         # Disable sched_boost
         # echo 0 > /proc/sys/kernel/sched_boost
 
-		# Set Memory parameters
-        configure_memory_parameters
+	# Set Memory parameters
         restorecon -R /sys/devices/system/cpu
 
 	    # Disable CPU retention
@@ -166,7 +163,7 @@ case "$target" in
         done
 
         # enable low power mode sleep
-        echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
+        echo N > /sys/module/lpm_levels/parameters/sleep_disabled
     ;;
 esac
 
