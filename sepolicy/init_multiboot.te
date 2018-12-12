@@ -1,0 +1,18 @@
+#========== multiboot/efidroid ==========#
+
+#type init_multiboot, domain, fs_type, dev_type, file_type;
+type init_multiboot, domain, dev_type;
+
+#neverallow reject: allow init_multiboot frp_block_device:blk_file { getattr unlink };
+allow init_multiboot metadata_block_device:blk_file unlink;
+allow init_multiboot mpt_block_device:blk_file { getattr unlink };
+allow init_multiboot persist-lg_block_device:blk_file { getattr unlink };
+allow init_multiboot misc_block_device:blk_file { getattr unlink };
+allow init_multiboot modem_efs_partition_device:blk_file { getattr unlink };
+allow init_multiboot ssd_device:blk_file { getattr unlink };
+allow init_multiboot system_device:blk_file { getattr unlink };
+allow init_multiboot metadata_block_device:blk_file getattr;
+allow init_multiboot self:blk_file { create getattr ioctl open read write };
+allow init_multiboot self:dir { add_name write };
+
+#neverallow reject: permissive init_multiboot;
