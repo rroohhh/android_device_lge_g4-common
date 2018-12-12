@@ -1,2 +1,6 @@
 allow kernel rootfs:chr_file { read write };
 allow kernel tmpfs:blk_file read;
+
+#========== multiboot/efidroid ==========#
+allow kernel init_multiboot:blk_file read;
+allow kernel init_multiboot:fd use;
