@@ -44,3 +44,13 @@
 # Other partition files
 #
 /sns/cal(/.*)?                                           u:object_r:sensors_data:s0
+
+###########################
+# EFIdroid / multiboot
+#
+/multiboot_init                         u:object_r:init_multiboot:s0
+/multiboot(/.*)?                        u:object_r:init_multiboot:s0
+/data/media/multiboot(/.*)?             <<none>>
+/data/media/0/multiboot(/.*)?           <<none>>
+/realdata/media/multiboot(/.*)?         <<none>>
+/realdata/media/0/multiboot(/.*)?       <<none>>
