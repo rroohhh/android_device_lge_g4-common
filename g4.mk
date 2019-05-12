@@ -21,6 +21,11 @@ PRODUCT_AAPT_PREF_CONFIG := 560dpi
 # Inherit proprietary blobs
 $(call inherit-product-if-exists, vendor/lge/g4-common/g4-common-vendor.mk)
 
+
+# Torch tile workaround
+PRODUCT_PACKAGES += \
+    io.github.berkantkz.kztorch
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
