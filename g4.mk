@@ -21,10 +21,6 @@ PRODUCT_AAPT_PREF_CONFIG := 560dpi
 # Inherit proprietary blobs
 $(call inherit-product-if-exists, vendor/lge/g4-common/g4-common-vendor.mk)
 
-# Torch tile workaround
-PRODUCT_PACKAGES += \
-    io.github.berkantkz.kztorch
-
 # rootless torch tile workaround
 PRODUCT_PACKAGES += \
     Flashlight
