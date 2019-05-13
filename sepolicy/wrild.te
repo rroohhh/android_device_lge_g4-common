@@ -6,6 +6,8 @@ type wrild, domain;
 type wrild_exec, exec_type, file_type;
 init_daemon_domain(wrild)
 
+allow wrild ctl_default_prop:property_service set;
+
 allow wrild healthd:file read;
 allow wrild hwservicemanager:file read;
 allow wrild init:dir { getattr search };
