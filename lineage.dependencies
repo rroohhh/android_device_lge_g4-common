@@ -1,27 +1,14 @@
 [
   {
-    "repository":  "kernel_lge_msm8992",
-    "target_path": "kernel/lge/msm8992",
-    "remote":      "thepiguy0"
+    "repository":  "https://github.com/CypherOS/kernel_lge_msm8992",
+    "target_path": "kernel/lge/msm8992"
   },
   {
-    "repository":  "android_device_qcom_common",
-    "target_path": "device/qcom/common",
-    "remote":      "lineage"
+    "repository":  "https://github.com/CypherOS/proprietary_vendor_lge",
+    "target_path": "vendor/lge"
   },
   {
-    "repository":  "android_hardware_sony_thermanager",
-    "target_path": "hardware/sony/thermanager",
-    "remote":      "lineage"
-  },
-  {
-    "repository":  "android_hardware_sony_timekeep",
-    "target_path": "hardware/sony/timekeep",
-    "remote":      "lineage"
-  },
-  {
-    "repository":  "proprietary_vendor_lge",
-    "target_path": "vendor/lge",
-    "remote":      "cypheros"
+    "repository":  "https://github.com/LineageOS/android_system_qcom",
+    "target_path": "system/qcom"
   }
 ]
