@@ -1,5 +1,55 @@
 <manifest version="1.0" type="device" target-level="legacy">
     <hal format="hidl">
+        <name>vendor.lineage.livedisplay</name>
+        <transport arch="32+64">passthrough</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IAdaptiveBacklight</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IColorEnhancement</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IAutoContrast</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IDisplayColorCalibration</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IDisplayModes</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IReadingEnhancement</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IColorBalance</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>ISunlightEnhancement</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IPictureAdjustment</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.0::IDevicesFactory/default</fqname>
+        <fqname>@2.0::IColorEnhancement/default</fqname>
+        <fqname>@2.0::IAutoContrast/default</fqname>
+        <fqname>@2.0::IDisplayColorCalibration/default</fqname>
+        <fqname>@2.0::IDisplayModes/default</fqname>
+        <fqname>@2.0::IReadingEnhancement/default</fqname>
+        <fqname>@2.0::IColorBalance/default</fqname>
+        <fqname>@2.0::ISunlightEnhancement/default</fqname>
+        <fqname>@2.0::IPictureAdjustment/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport arch="32+64">passthrough</transport>
         <version>2.0</version>
@@ -368,7 +418,7 @@
         </interface>
         <fqname>@1.0::IContexthub/default</fqname>
     </hal>
-        <hal format="hidl">
+    <hal format="hidl">
         <name>vendor.lineage.livedisplay</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -376,6 +426,7 @@
             <name>IColor</name>
             <instance>default</instance>
         </interface>
+        <fqname>@1.0::IColor/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.lineage.trust</name>
@@ -385,6 +436,7 @@
             <name>IUsbRestrict</name>
             <instance>default</instance>
         </interface>
+        <fqname>@1.0::IUsbRestrict/default</fqname>
     </hal>
     <sepolicy>
         <version>28.0</version>
