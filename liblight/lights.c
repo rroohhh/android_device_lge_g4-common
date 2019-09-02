@@ -127,6 +127,9 @@ set_light_backlight(struct light_device_t* dev,
 {
     int err = 0;
     int brightness = rgb_to_brightness(state);
+    if(!dev) {
+        return -1;
+    }
     pthread_mutex_lock(&g_lock);
     err = write_int(LCD_FILE, brightness);
     pthread_mutex_unlock(&g_lock);
@@ -140,6 +143,10 @@ set_speaker_light_locked(struct light_device_t* dev,
     int onMS, offMS;
     unsigned int colorRGB;
     char pattern[PAGE_SIZE];
+
+    if(!dev) {
+        return -1;
+    }
 
     if (state != NULL) {
         switch (state->flashMode) {
@@ -174,16 +181,17 @@ static void
 handle_led_prioritized_locked(struct light_device_t* dev,
         struct light_state_t const* state)
 {
-    if (is_lit(&g_attention)) {
-        set_speaker_light_locked(dev, &g_attention);
-    } else if (is_lit(&g_notification)) {
-        set_speaker_light_locked(dev, &g_notification);
-    } else if(is_lit(&g_battery)) {
-        set_speaker_light_locked(dev, &g_battery);
-    } else {
-        set_speaker_light_locked(dev, &g_notification);
+    if(state > 0) {
+        if (is_lit(&g_attention)) {
+            set_speaker_light_locked(dev, &g_attention);
+        } else if (is_lit(&g_notification)) {
+            set_speaker_light_locked(dev, &g_notification);
+        } else if(is_lit(&g_battery)) {
+            set_speaker_light_locked(dev, &g_battery);
+        } else {
+            set_speaker_light_locked(dev, &g_notification);
+        }
     }
-
 }
 
 static int
