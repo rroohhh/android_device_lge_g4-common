@@ -32,6 +32,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio_hal.period_size=192 \
     ro.audio.flinger_standbytime_ms=300 \
     use.voice.path.for.pcm.voip=false \
+    persist.bluetooth.bluetooth_audio_hal.disabled=true
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
