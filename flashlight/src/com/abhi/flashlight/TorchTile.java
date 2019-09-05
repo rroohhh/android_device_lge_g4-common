@@ -29,10 +29,10 @@ public class TorchTile extends TileService {
 
     public void updateTile() {
         if (isTorchEnabled()) {
-            getQsTile().setIcon(Icon.createWithResource(this, R.drawable.ic_flashlight_on));
+            getQsTile().setIcon(Icon.createWithResource(this, R.drawable.ic_flashlight));
             getQsTile().setState(Tile.STATE_ACTIVE);
         } else {
-            getQsTile().setIcon(Icon.createWithResource(this, R.drawable.ic_flashlight_off));
+            getQsTile().setIcon(Icon.createWithResource(this, R.drawable.ic_flashlight));
             getQsTile().setState(Tile.STATE_INACTIVE);
         }
         getQsTile().updateTile();
