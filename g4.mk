@@ -27,10 +27,8 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libqcomvoiceprocessingdescriptors \
     libtinyalsa \
     libtinycompress \
-    libtinyxml \
     tinymix \
     audio.a2dp.default \
     audio.primary.msm8992 \
