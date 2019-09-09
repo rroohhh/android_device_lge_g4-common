@@ -1,7 +1,8 @@
 [
   {
-    "repository":  "https://github.com/CypherOS/kernel_lge_msm8992",
-    "target_path": "kernel/lge/msm8992"
+    "repository":  "https://github.com/Suicide-Squirrel/Titan-Kernel-LG-G4",
+    "target_path": "kernel/lge/msm8992",
+    "branch":      "android-10.0"
   },
   {
     "repository":  "https://github.com/CypherOS/proprietary_vendor_lge",
@@ -10,5 +11,9 @@
   {
     "repository":  "https://github.com/LineageOS/android_system_qcom",
     "target_path": "system/qcom"
+  },
+  {
+    "repository":  "https://github.com/Suicide-Squirrel/android_system_connectivity_wificond",
+    "target_path": "system/connectivity/wificond"
   }
 ]
