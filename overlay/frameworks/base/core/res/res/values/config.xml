@@ -373,5 +373,14 @@
     <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
 
     <!-- Disable rounded corners on windows to improve graphics performance -->
-    <bool name="config_supportsRoundedCornersOnWindows">false</bool>
+    <bool name="config_supportsRoundedCornersOnWindows">true</bool>
+
+    <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
+    <bool name="config_useRoundIcon">true</bool>
+
+    <!-- Flag indicating whether the surface flinger has limited
+         alpha compositing functionality in hardware.  If set, the window
+         manager will disable alpha trasformation in animations where not
+         strictly needed. -->
+    <bool name="config_sf_limitedAlpha">true</bool>
 </resources>
